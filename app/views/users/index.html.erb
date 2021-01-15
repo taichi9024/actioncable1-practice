@@ -1,0 +1,19 @@
+<h1>ユーザー一覧</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">NAME</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |u|%>
+    <tr>
+      <th scope="row">#</th>
+      <td><%=link_to u.name, user_path(u) %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+

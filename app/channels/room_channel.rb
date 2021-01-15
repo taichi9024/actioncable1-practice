@@ -21,4 +21,8 @@ class RoomChannel < ApplicationCable::Channel
       locals: {message: message}
     )
   end
+
+  def set_room
+    @room = Room.find_by(giver_id:current_user.id, getter_id: params[:id])
+  end
 end

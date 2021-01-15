@@ -1,0 +1,6 @@
+<h1><%= @user.name %></h1>
+<h3><%= @user.name%>さんのページです</h3>
+
+<%= link_to "チャットする",new_user_room_path(@user.id) %><br>
+
+<%= link_to "ユーザー一覧", users_path%>
